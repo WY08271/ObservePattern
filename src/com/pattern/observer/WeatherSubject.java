@@ -6,9 +6,8 @@ import java.util.List;
 /**
  *  目标对象,它知道观察它的观察者,并提供添加删除观察者的接口
  */
-public class Subject {
+public class WeatherSubject {
     private List<Observer> observers = new ArrayList<Observer>();
-
 
     public void attach(Observer observer) {
         observers.add(observer);
@@ -23,4 +22,10 @@ public class Subject {
             observer.update(this);
         }
     }
+
+//    protected void notifyObservers(String content) {
+//        for (Observer observer : observers) {
+//            observer.update(content);
+//        }
+//    }
 }
